@@ -1,0 +1,6 @@
+<launch>
+  <!-- Launch the encoder odometry node -->
+  <node pkg="ackermann_encoder_odometry" type="encoder_odometry_node" name="encoder_odometry_node" output="screen">
+  </node>
+</launch>
+

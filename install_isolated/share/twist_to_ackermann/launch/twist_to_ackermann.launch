@@ -1,0 +1,6 @@
+<launch>
+ <node pkg="twist_to_ackermann" type="twist_to_ackermann_node.py" name="twist_to_ackermann" output="screen">
+  <param name="wheelbase" value="1.9812" />
+  <param name="max_steering_angle" value="0.611" />
+ </node>
+</launch>

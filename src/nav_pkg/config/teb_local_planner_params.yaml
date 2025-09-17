@@ -1,0 +1,20 @@
+TebLocalPlannerROS:
+ odom_topic: odom
+ map_frame: map
+
+ max_vel_x: 2.0
+ transform_tolerance: 1
+ max_vel_x_backwards: 0.5
+ max_vel_theta: 0.5
+ acc_lim_x: 1.0
+ acc_lim_theta: 0.5
+ min_turning_radius: 3.0
+ wheelbase: 1.9812
+ cmd_angle_instead_rotvel: true
+
+ xy_goal_tolerance: 0.3
+ yaw_goal_tolerance: 0.2
+ free_goal_vel: false
+
+ min_obstacle_dist: 0.5
+ inflation_dist: 0.6

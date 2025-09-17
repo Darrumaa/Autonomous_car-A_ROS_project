@@ -1,0 +1,8 @@
+prefix=/home/self/Saxxophone_500/devel_isolated/nav_pkg
+
+Name: nav_pkg
+Description: Description of nav_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

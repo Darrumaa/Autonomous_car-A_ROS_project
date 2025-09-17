@@ -1,0 +1,15 @@
+# ROS build artifacts
+build/
+devel/
+logs/
+install/
+
+# Python cache
+*.pyc
+__pycache__/
+
+# Editor/OS junk
+*.swp
+*.swo
+.DS_Store
+

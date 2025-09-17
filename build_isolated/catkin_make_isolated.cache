@@ -1,0 +1,2 @@
+ackermann_encoder_odometry:cartographer:cartographer_ros/cartographer_ros:cartographer_ros/cartographer_ros_msgs:cartographer_ros/cartographer_rviz:mpu_6050_driver:nav_pkg:ros-sensor_msgs_ext:rplidar_ros:twist_to_ackermann
+-G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/self/Saxxophone_500/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/self/Saxxophone_500/install_isolated

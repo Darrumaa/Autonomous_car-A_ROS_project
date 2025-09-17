@@ -1,0 +1,8 @@
+prefix=/home/self/Saxxophone_500/devel_isolated/rplidar_ros
+
+Name: rplidar_ros
+Description: Description of rplidar_ros
+Version: 2.1.5
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

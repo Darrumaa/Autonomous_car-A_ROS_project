@@ -1,0 +1,26 @@
+<launch>
+	<!-- Load URDF -->
+  	<param name="robot_description" textfile="$(find nav_pkg)/urdf/nav_sim.urdf" />
+
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  	<!-- Robot State Publisher -->
+ 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
+	<node pkg="map_server" type="map_server" name="map_server" args="$(find nav_pkg)/maps/map.yaml"/>
+	
+	<node pkg="amcl" type="amcl" name="amcl" output="screen">
+	<param name="odom_model_type" value="diff"/>
+	<param name="base_frame_id" value="base_link"/>
+	<param name="odom_frame_id" value="odom"/>
+	<param name="scan_topic" value="scan"/>
+	</node>
+
+	<node pkg="move_base" type="move_base" name="move_base" output="screen">
+	<rosparam file="$(find nav_pkg)/config/costmap_common_params.yaml" command="load" />
+	<rosparam file="$(find nav_pkg)/config/global_costmap_params.yaml" command="load" />
+	<rosparam file="$(find nav_pkg)/config/local_costmap_params.yaml" command="load" />
+	
+	<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+	<rosparam file="$(find nav_pkg)/config/teb_local_planner_params.yaml" command="load" />
+	</node>
+</launch>

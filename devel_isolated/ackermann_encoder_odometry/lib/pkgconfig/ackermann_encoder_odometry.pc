@@ -1,0 +1,8 @@
+prefix=/home/self/Saxxophone_500/devel_isolated/ackermann_encoder_odometry
+
+Name: ackermann_encoder_odometry
+Description: Description of ackermann_encoder_odometry
+Version: 0.0.1
+Cflags: -I/home/self/Saxxophone_500/devel_isolated/ackermann_encoder_odometry/include
+Libs: -L${prefix}/lib 
+Requires: roscpp nav_msgs tf serial message_runtime

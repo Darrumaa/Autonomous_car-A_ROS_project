@@ -1,0 +1,56 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/self/Saxxophone_500/build_isolated/sensor_msgs_ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c9134/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c9134.dir/build.make CMakeFiles/cmTC_c9134.dir/build
+make[1]: Entering directory '/home/self/Saxxophone_500/build_isolated/sensor_msgs_ext/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c9134.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c9134.dir/CheckSymbolExists.c.o   -c /home/self/Saxxophone_500/build_isolated/sensor_msgs_ext/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c9134
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9134.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c9134.dir/CheckSymbolExists.c.o  -o cmTC_c9134 
+CMakeFiles/cmTC_c9134.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c9134.dir/build.make:97: recipe for target 'cmTC_c9134' failed
+make[1]: *** [cmTC_c9134] Error 1
+make[1]: Leaving directory '/home/self/Saxxophone_500/build_isolated/sensor_msgs_ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c9134/fast' failed
+make: *** [cmTC_c9134/fast] Error 2
+
+File /home/self/Saxxophone_500/build_isolated/sensor_msgs_ext/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/self/Saxxophone_500/build_isolated/sensor_msgs_ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_08c52/fast"
+/usr/bin/make -f CMakeFiles/cmTC_08c52.dir/build.make CMakeFiles/cmTC_08c52.dir/build
+make[1]: Entering directory '/home/self/Saxxophone_500/build_isolated/sensor_msgs_ext/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_08c52.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_08c52.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_08c52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08c52.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_08c52.dir/CheckFunctionExists.c.o  -o cmTC_08c52 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_08c52.dir/build.make:97: recipe for target 'cmTC_08c52' failed
+make[1]: *** [cmTC_08c52] Error 1
+make[1]: Leaving directory '/home/self/Saxxophone_500/build_isolated/sensor_msgs_ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_08c52/fast' failed
+make: *** [cmTC_08c52/fast] Error 2
+
+

@@ -1,0 +1,16 @@
+<launch>
+ <arg name="paused" default="false"/>
+ <arg name="use_sim_time" default="true"/>
+
+ <param name="use_sim_time" value="$(arg use_sim_time)"/>
+ 
+ <param name="robot_description" textfile="$(find nav_pkg)/urdf/nav_sim.urdf"/>
+
+ <include file="$(find gazebo_ros)/launch/empty_world.launch">
+  <arg name="paused" value="$(arg paused)"/>
+  <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+  <arg name="gui" value="true"/>
+ </include>
+
+ <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model Mks_Saxx_1500 -x 0 -y 0 -z 1.0" output="screen"/>
+</launch>
